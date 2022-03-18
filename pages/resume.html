@@ -1,0 +1,130 @@
+<div class="section mt-0">
+    <h1 class="title title--h1 title__separate">Resume</h1>
+</div>
+
+<!-- Experience -->
+<div class="section">
+    <h2 class="title title--h2"><img class="title-icon" src="assets/icons/icon-education.svg" alt="" /> Education</h2>
+    <div class="timeline">
+        <!-- Item -->
+        <article class="timeline__item">
+            <h5 class="title title--h3 timeline__title">Ho Chi Minh City University of Technology and Education</h5>
+            <span class="timeline__period">2015 — 2019</span>
+            <p class="timeline__description">Information Technology (pending)</p>
+        </article>
+                        
+        <!-- Item -->
+        <article class="timeline__item">
+            <h5 class="title title--h3 timeline__title">VNUHCM-University Of Science (Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh)</h5>
+            <span class="timeline__period">2014</span>
+            <p class="timeline__description">Learn ASP.NET MVC course</p>
+        </article>
+                        
+        <!-- Item -->
+        <article class="timeline__item">
+            <h5 class="title title--h3 timeline__title">Ho Chi Minh City College of Transport (Cao Đẳng Giao Thông vận tải TP. Hồ Chí Minh)</h5>
+            <span class="timeline__period">2011 — 2014</span>
+            <p class="timeline__description">Tin học ứng dụng</p>
+        </article>
+    </div>	
+</div>
+
+<div class="section">
+    <h2 class="title title--h2"><img class="title-icon" src="assets/icons/icon-experience.svg" alt="" /> Experience</h2>
+    <div class="timeline">
+        <!-- Item -->
+        <article class="timeline__item">
+            <h5 class="title title--h3 timeline__title">Team leader - R&D/Front-End</h5>
+            <span class="timeline__period">2017 — Present</span>
+            <p class="timeline__description">Công ty TNHH Tài Nguyên Tri Thức Việt Năng - VnResource</p>
+        </article>
+                        
+        <!-- Item -->
+        <article class="timeline__item">
+            <h5 class="title title--h3 timeline__title">Full Stack developer</h5>
+            <span class="timeline__period">6/2016 — 12/2016</span>
+            <p class="timeline__description">PSC - Pyramid Software and Consulting</p>
+        </article>
+                        
+        <!-- Item -->
+        <article class="timeline__item">
+            <h5 class="title title--h3 timeline__title">Full Stack developer</h5>
+            <span class="timeline__period">2015 — 4/2016</span>
+            <p class="timeline__description">Công Ty Cổ Phần Dược Phẩm PyLoRa</p>
+        </article>
+    </div>
+</div>
+        
+<!-- Skills -->
+<div class="section">
+    <h2 class="title title--h2">My Skills</h2>
+    <div class="box-gray">
+        <!-- Progress -->
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-text"><span>Web Design</span><span>80%</span></div>
+            </div>
+            <div class="progress-text"><span>Web Design</span></div>
+        </div>
+                        
+        <!-- Progress -->
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-text"><span>Graphic Design</span><span>75%</span></div>
+            </div>
+            <div class="progress-text"><span>Graphic Design</span></div>
+        </div>
+                        
+        <!-- Progress -->
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-text"><span>Photoshop</span><span>90%</span></div>
+            </div>
+            <div class="progress-text"><span>Photoshop</span></div>
+        </div>
+                        
+        <!-- Progress -->
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-text"><span>Illustrator</span><span>50%</span></div>
+            </div>
+            <div class="progress-text"><span>Illustrator</span></div>
+        </div>
+    </div>
+</div>
+<script>
+      anime({
+        targets: 'body',
+        opacity: 1,
+        delay: 0,
+        complete: function(anim) {
+            progressBar(); //Init progress bar
+        }
+    });
+
+        /*-----------------------------------------------------------------
+      Progress bar
+    -------------------------------------------------------------------*/
+
+    function progressBar() {
+        $('.progress').each(function() {
+            var ctrl = new ScrollMagic.Controller();
+            new ScrollMagic.Scene({
+                    triggerElement: '.progress',
+                    triggerHook: 'onEnter',
+                    duration: 300
+                })
+                .addTo(ctrl)
+                .on("enter", function(e) {
+                    var progressBar = $('.progress-bar');
+                    progressBar.each(function(indx) {
+                        $(this).css({
+                            'width': $(this).attr('aria-valuenow') + '%',
+                            'z-index': '2'
+                        });
+                    });
+                });
+        });
+    }
+
+</script>
