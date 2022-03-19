@@ -23,5 +23,4 @@ app.config(function ($routeProvider) {
 app.controller("myCtrl", function ($scope, $route) {
   var vm = this;
   vm.$route = $route;
-  debugger
 });
