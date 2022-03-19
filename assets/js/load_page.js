@@ -18,7 +18,7 @@ app.config(function ($routeProvider,$locationProvider) {
     .otherwise({
       redirectTo: '/about'
   });
-  $locationProvider.html5Mode(true);
+  //$locationProvider.html5Mode(true);
 });
 
 app.controller("myCtrl", function ($scope, $route) {
