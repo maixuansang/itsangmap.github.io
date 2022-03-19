@@ -62,13 +62,13 @@
 
         <div class="nav-wrap">
             <ul class="nav">
-                <li class="nav__item"><a ng-class="{active: $ctrl.$route.current.activetab == 'about'}" href="#!/about">About</a>
+                <li class="nav__item"><a ng-class="{active: $ctrl.$route.current.activetab == 'about'}" ng-href="#!/about">About</a>
                 </li>
                 <li class="nav__item"><a ng-class="{active: $ctrl.$route.current.activetab == 'resume'}"
-                        href="#!/resume">Resume</a></li>
-                <li class="nav__item"><a  href="#!/about">Portfolio</a></li>
-                <li class="nav__item"><a href="#!/about">Blog</a></li>
-                <li class="nav__item"><a  href="#!/about">Contact</a></li>
+                    ng-href="#!/resume">Resume</a></li>
+                <li class="nav__item"><a  ng-href="#!/about">Portfolio</a></li>
+                <li class="nav__item"><a ng-href="#!/about">Blog</a></li>
+                <li class="nav__item"><a  ng-href="#!/about">Contact</a></li>
             </ul>
         </div>
 
